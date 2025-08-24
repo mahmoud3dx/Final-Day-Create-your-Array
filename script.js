@@ -1,15 +1,18 @@
-// Create a empty array to store the names here 
+let Name = [];
+function addName() {
+    
+    let inputVal = document.getElementById("name").value;
+    Name.push(inputVal);
+    //`<li>${element}</li>`
+    Name.forEach(element => {
+        document.getElementById("namesList").innerHTML += "<ul>" + element + "</ul>";
+    });
 
+}
 
-// create a function that can add names to the array and print it in the list here 
+function deleteName() {
+    Name.pop();
+    let remove = document.getElementById("namesList");
 
-
-
-
-// create a function that can remove the last name from the array and print it in the list here 
-
-
-
-
-
-
+    remove.removeChild(remove.lastChild);
+}
